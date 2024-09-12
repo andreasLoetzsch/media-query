@@ -1,0 +1,139 @@
+body {
+  background: url(../img/12_col.gif) center top repeat-y;
+  background-size: 90%;
+}
+
+[class*="section"] {
+  border: 1px solid #333;
+  min-height: 100px;
+  height: 21vh;
+}
+
+#container,
+#container-footer {
+  width: 89.5%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 2%;
+  row-gap: 20px;
+}
+
+#container-footer {
+  border: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.section-header {
+  grid-column: 1 / span 12;
+  grid-row: 1;
+}
+
+.section-box1 {
+  grid-column-start: 0;
+  grid-column: span 2 / 3;
+  grid-row-start: 2;
+}
+
+.section-box2 {
+  grid-column: 3 / span 8;
+  grid-row-start: 2;
+}
+
+.section-box3 {
+  grid-column: 11 / span 2;
+  grid-row-start: 2;
+}
+
+.section-content {
+  grid-column: 1 / span 9;
+  grid-row: 3;
+}
+
+.section-sidebar {
+  grid-column: 10 / span 3;
+}
+
+.section-footer1,
+.section-footer2,
+.section-footer3,
+.section-footer4 {
+  grid-column: span 3;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-box1 {
+    grid-column: 1 / span 3;
+  }
+  .section-box2 {
+    grid-column: 4 / span 6;
+  }
+  .section-box3 {
+    grid-column: 10 / span 3;
+  }
+  .section-content {
+    grid-column: 1 / span 8;
+  }
+  .section-sidebar {
+    grid-column: 9 / span 4;
+  }
+}
+@media screen and (max-width: 960px) {
+  .section-box1 {
+    grid-column: 1 / span 4;
+  }
+  .section-box2 {
+    grid-column: 5 / span 4;
+  }
+  .section-box3 {
+    grid-column: 9 / span 4;
+  }
+  .section-content {
+    grid-column: 1 / span 6;
+  }
+  .section-sidebar {
+    grid-column: 7 / span 6;
+  }
+  .section-footer1 {
+    grid-column: 1 / span 6;
+  }
+  .section-footer2 {
+    grid-column: 7 / span 6;
+  }
+  .section-footer3 {
+    grid-column: 1 / span 6;
+  }
+  .section-footer4 {
+    grid-column: 7 / span 6;
+  }
+  [class*="section"] {
+    height: 17vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-sidebar,
+  .section-footer1,
+  .section-footer2,
+  .section-footer3,
+  .section-footer4 {
+    grid-column: 1 / span 12;
+  }
+  .section-box1 {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+  }
+  .section-box2 {
+    grid-column: 1 / span 12;
+    grid-row: 3;
+  }
+  .section-box3 {
+    grid-column: 1 / span 12;
+    grid-row: 4;
+  }
+  .section-content {
+    grid-row: 5;
+    grid-column: 1 / span 12;
+  }
+}

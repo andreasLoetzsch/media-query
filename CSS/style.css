@@ -26,13 +26,14 @@ body {
   margin-top: 20px;
 }
 
-.section-header {
+.header {
   background-color: beige;
   display: flex;
   padding: 20px;
   gap: 20px;
   align-items: center;
   justify-content: flex-start;
+  border: 1px solid black;
 }
 
 #btn1 {
@@ -53,8 +54,8 @@ body {
   margin-left: auto;
 }
 
-.section-content {
-  height: 125px;
+.content {
+  border: 1px solid black;
   display: flex;
   background-color: beige;
   padding: 8px;
@@ -93,7 +94,8 @@ body {
   width: 250px
 }
 
-.section-sidebar {
+.sidebar {
+  border: 1px solid black;
   background-color: beige;
   display: flex;
   flex-direction: column;
@@ -101,14 +103,13 @@ body {
   gap: 10px;
   border-bottom: none;
   border-left: none;
-  justify-content: start;
+  height: 200px;
+
 }
 
-#btn4 {
-  width: 241.66px;
-}
+#btn-side-4 {}
 
-.section-header {
+.header {
   grid-column: 1 / span 12;
   grid-row: 1;
 }
@@ -129,12 +130,12 @@ body {
   grid-row-start: 2;
 }
 
-.section-content {
+.content {
   grid-column: 1 / span 9;
   grid-row: 3;
 }
 
-.section-sidebar {
+.sidebar {
   grid-column: 10 / span 3;
 }
 

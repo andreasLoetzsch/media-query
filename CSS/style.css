@@ -38,7 +38,6 @@ body {
 
 #btn1 {
   height: 20px;
-
 }
 
 #btn2 {
@@ -58,7 +57,7 @@ body {
   border: 1px solid black;
   display: flex;
   background-color: beige;
-  padding: 8px;
+  padding: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 15px;
@@ -66,32 +65,32 @@ body {
 
 #content-1 {
   border: 1px solid black;
-  width: 250px
+  width: 30%;
 }
 
 #content-2 {
   border: 1px solid black;
-  width: 250px
+  width: 30%;
 }
 
 #content-3 {
   border: 1px solid black;
-  width: 250px
+  width: 30%;
 }
 
 #content-4 {
   border: 1px solid black;
-  width: 250px
+  width: 30%;
 }
 
 #content-5 {
   border: 1px solid black;
-  width: 250px
+  width: 30%;
 }
 
 #content-6 {
   border: 1px solid black;
-  width: 250px
+  width: 30%;
 }
 
 .sidebar {
@@ -104,10 +103,10 @@ body {
   border-bottom: none;
   border-left: none;
   height: 200px;
-
 }
 
-#btn-side-4 {}
+#btn-side-4 {
+}
 
 .header {
   grid-column: 1 / span 12;
@@ -159,12 +158,29 @@ body {
     grid-column: 10 / span 3;
   }
 
-  .section-content {
+  .content {
     grid-column: 1 / span 8;
+    height: 30vh;
   }
 
-  .section-sidebar {
+  .sidebar {
     grid-column: 9 / span 4;
+    height: 30vh;
+    border-left: 1px solid black;
+    border-right: none;
+  }
+  .header {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+  #content-1,
+  #content-2,
+  #content-3,
+  #content-4,
+  #content-5,
+  #content-6 {
+    width: 48%;
   }
 }
 
@@ -181,12 +197,15 @@ body {
     grid-column: 9 / span 4;
   }
 
-  .section-content {
+  .content {
     grid-column: 1 / span 6;
+    height: 60vh;
   }
 
-  .section-sidebar {
+  .sidebar {
     grid-column: 7 / span 6;
+    height: 60vh;
+    border: 1px solid black;
   }
 
   .section-footer1 {
@@ -204,15 +223,25 @@ body {
   .section-footer4 {
     grid-column: 7 / span 6;
   }
+  .header {
+    border: 1px solid black;
+  }
 
   [class*="section"] {
     height: 17vh;
   }
+  #content-1,
+  #content-2,
+  #content-3,
+  #content-4,
+  #content-5,
+  #content-6 {
+    width: 98%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-
-  .section-sidebar,
+  .sidebar,
   .section-footer1,
   .section-footer2,
   .section-footer3,
@@ -235,8 +264,18 @@ body {
     grid-row: 4;
   }
 
-  .section-content {
+  .content {
     grid-row: 5;
     grid-column: 1 / span 12;
+    height: 60vh;
+  }
+  .sidebar {
+    height: 17vh;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  #btn4 {
+    margin-left: 0;
   }
 }
